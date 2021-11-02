@@ -1,0 +1,19 @@
+{
+  "name": "clean-artitechture",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/efeArdaYildirim/node-js-celan-architecture.git",
+  "author": "Efe Arda <efeardayildrim@gmial.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest",
+    "watch": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}
