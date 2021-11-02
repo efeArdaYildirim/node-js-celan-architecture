@@ -12,6 +12,16 @@ module.exports.User = class User {
     this.lastName = lastName
     this.meta = meta
   }
+
+  clone() {
+    return new User({
+      id: this.id,
+      name: this.name,
+      gender: this.gender,
+      lastName: this.lastName,
+      meta: this.meta
+    })
+  }
 }
 
 const genders = {

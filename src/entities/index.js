@@ -1,4 +1,4 @@
-const { User, userConstants } = require("./src/entities/user");
+const { User, userConstants } = require("./user");
 
 module.exports = {
   User,

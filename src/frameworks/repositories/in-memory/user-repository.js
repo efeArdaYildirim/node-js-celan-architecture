@@ -1,4 +1,4 @@
-const { inMemory: inMemoryDb } = require("../database");
+const { inMemory: inMemoryDb } = require("../../database");
 const { v4: uuid } = require('uuid')
 module.exports = {
   add: (user) => {
@@ -16,9 +16,10 @@ module.exports = {
   delete: (user) => {
     if (!inMemoryDb.users.has(user.id)) return null
     inMemoryDb.users.delete(user.id)
+    return user
   },
-  getById: (user) => {
-    if (!inMemoryDb.users.has(user.id)) return null
-    return inMemoryDb.users.get(user.id)
+  getById: (id) => {
+    if (!inMemoryDb.users.has(id)) return undefined
+    return inMemoryDb.users.get(id)
   }
 }
