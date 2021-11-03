@@ -1,5 +1,6 @@
 const userRepository = require('./user-repository')
-
+const productRepository = require('./product-repository')
 module.exports = {
-  userRepository
+  userRepository,
+  productRepository
 }
