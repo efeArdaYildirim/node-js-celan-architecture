@@ -6,14 +6,8 @@ module.exports = dependecies => {
     throw new Error('bu user dependenciesde yok')
   }
 
-  const execute = ({
-    name,
-    lastName,
-    gender,
-    meta
-  }) => {
-    const user = new User({ name, lastName, gender, meta })
-    return userRepository.add(user)
+  const execute = ({ user = {} }) => {
+    return userRepository.delete(user)
   }
 
   return { execute }
